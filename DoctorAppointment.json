@@ -1,0 +1,104 @@
+[        {
+            "slotType": "appointmentType",
+            "name": "appointmentTypes",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "What type of appointment?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 6,
+            "slotTypeVersion": "$LATEST",
+            "sampleUtterances": [
+                "I would like to go with {appointmentTypes}"
+            ],
+            "description": "The type of apointments to make"
+        },
+        {
+            "slotType": "AMAZON.US_FIRST_NAME",
+            "name": "name",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "What's your name?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 1,
+            "description": "Client's first name"
+        },
+        {
+            "slotType": "AMAZON.EmailAddress",
+            "name": "emailAddress",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "What is your email address {name}?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 2,
+            "description": "client's email address"
+        },
+        {
+            "slotType": "AMAZON.NUMBER",
+            "name": "insuranceNumber",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "What is your insuranceNumber {name}?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 3,
+            "sampleUtterances": [
+                "my insurance number is {insuranceNumber}"
+            ],
+            "description": "client's insuranceNumber"
+        },
+        {
+            "slotType": "AMAZON.DATE",
+            "name": "Date",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "On what day do you want me to book an appointment?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 4,
+            "description": "Day on which client wants to book his appointment."
+        },
+        {
+            "slotType": "AMAZON.TIME",
+            "name": "Time",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+                "maxAttempts": 2,
+                "messages": [
+                    {
+                        "content": "At what time should I make an appointment on {Date}?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            },
+            "priority": 5,
+            "description": "Time at which client want to book his appointment"
+        }
+]

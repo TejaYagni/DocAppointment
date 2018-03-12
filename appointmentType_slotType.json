@@ -1,0 +1,15 @@
+{
+    "enumerationValues": [
+        {
+            "value": "vision"
+        },
+        {
+            "value": "dental"
+        },
+        {
+            "value": "general"
+        }
+    ],
+    "name": "appointmentType",
+    "description": "Types of appointments to select from"
+}
