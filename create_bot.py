@@ -8,6 +8,10 @@ bot_intents = [
 			{
 			"intentName" : "DoctorAppointment",
 			"intentVersion" : "$LATEST"
+			},
+			{
+			"intentName" : "DoctorList",
+			"intentVersion" : "$LATEST"
 			}
 		]
 bot_clarificationPrompt = {
